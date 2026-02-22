@@ -1,202 +1,131 @@
-\# Experiment Results Summary – DBMS RAG Study Assistant
+# Experiment Results Summary – DBMS RAG Study Assistant
 
+## Experiment 1: Chunking Strategies
 
-
-\## Experiment 1: Chunking Strategies
-
-
-
-\### Methodology
+### Methodology
 
 Compared:
 
-\- Fixed-size chunking
+- Fixed-size chunking
 
-\- Sentence-based chunking
-
-
+- Sentence-based chunking
 
 Used same:
 
-\- Embedding model
+- Embedding model
 
-\- Top-k value
+- Top-k value
 
-\- Prompt
+- Prompt
 
-\- 10 DBMS questions
+- 10 DBMS questions
 
-
-
-\### Observations
-
-
+### Observations
 
 Fixed-size chunking:
 
-\- More stable retrieval
+- More stable retrieval
 
-\- Less repetition
+- Less repetition
 
-\- Cleaner context
-
-
+- Cleaner context
 
 Sentence-based chunking:
 
-\- Sometimes provided more explanation
+- Sometimes provided more explanation
 
-\- But introduced repeated or merged content
+- But introduced repeated or merged content
 
-\- Less consistent
+- Less consistent
 
-
-
-\### Conclusion
-
-
+### Conclusion
 
 Fixed-size chunking worked better for my DBMS PDFs due to formatting inconsistencies and merged headings.
 
+## Experiment 2: Prompting Techniques
 
+### Compared:
 
----
+- Basic prompt
 
+- Improved structured prompt
 
-
-\## Experiment 2: Prompting Techniques
-
-
-
-\### Compared:
-
-\- Basic prompt
-
-\- Improved structured prompt
-
-
-
-\### Observations
-
-
+### Observations
 
 Basic Prompt:
 
-\- Very short answers
+- Very short answers
 
-\- Often incomplete
-
-
+- Often incomplete
 
 Improved Prompt:
 
-\- Slightly more structured responses
+- Slightly more structured responses
 
-\- Better completeness
+- Better completeness
 
-\- Still limited by model capability
+- Still limited by model capability
 
-
-
-\### Conclusion
-
-
+### Conclusion
 
 Improved prompt provided marginal improvement. Prompt engineering helps, but model capability remains a limiting factor.
 
-
-
----
-
-
-
-\## Experiment 3: Retrieval Strategy (Top-k Comparison)
-
-
+## Experiment 3: Retrieval Strategy (Top-k Comparison)
 
 Tested:
 
-\- Top-k = 3
+- Top-k = 3
 
-\- Top-k = 5
+- Top-k = 5
 
-\- Top-k = 8
+- Top-k = 8
 
-
-
-\### Observations
-
-
+### Observations
 
 Top-k = 3:
 
-\- Cleaner answers
+- Cleaner answers
 
-\- More focused context
-
-
+- More focused context
 
 Top-k = 5:
 
-\- Introduced noise
+- Introduced noise
 
-\- Page numbers and headers appeared
-
-
+- Page numbers and headers appeared
 
 Top-k = 8:
 
-\- Too much irrelevant context
+- Too much irrelevant context
 
-\- Answer quality degraded
+- Answer quality degraded
 
-
-
-\### Conclusion
-
-
+### Conclusion
 
 Increasing top-k does not always improve RAG performance.
 
 For my dataset, top-k = 3 worked best.
 
+## Overall Findings
 
+1. Chunking strategy has strong impact on retrieval quality.
 
----
+2. Retrieval quality matters more than quantity.
 
+3. Prompt engineering improves clarity but cannot compensate for weak models.
 
+4. Document preprocessing is critical in real-world RAG systems.
 
-\## Overall Findings
+## Recommended Production Setup
 
+- Fixed-size chunking
 
+- Top-k = 3
 
-1\. Chunking strategy has strong impact on retrieval quality.
+- Cleaned text
 
-2\. Retrieval quality matters more than quantity.
+- Improved prompt
 
-3\. Prompt engineering improves clarity but cannot compensate for weak models.
+- Sentence-transformer embeddings
 
-4\. Document preprocessing is critical in real-world RAG systems.
-
-
-
----
-
-
-
-\## Recommended Production Setup
-
-
-
-\- Fixed-size chunking
-
-\- Top-k = 3
-
-\- Cleaned text
-
-\- Improved prompt
-
-\- Sentence-transformer embeddings
-
-\- ChromaDB vector store
-
+- ChromaDB vector store
