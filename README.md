@@ -32,18 +32,25 @@ The study assistant:
 
 ---
 
-# 📂 Project Structure
-AI-powered_study_assistant/  
+academic-rag-study-assistant/
+│
+├── data/                               
+│
+├── notebook/                           
+│   ├── RAG-Study-Assistant.ipynb        
+│   └── Experiment-Result-Markdown.ipynb    
 │  
-├── data/  
+├── rag_env/                             
 │  
-├── notebooks/    
-│ └── RAG-Study-Assistant.ipynb  
-| └── Experiment-Result-Markdown.ipynb  
-│    
-├── evaluation_results.csv    
-├── README.md  
-└── requirements.txt  
+├── .env                                 
+├── .gitignore                           
+│  
+├── experiment_results.md               
+├── README.md                            
+├── requirements.txt                     
+│
+├── RAG-Study-Assistant.pdf                
+└── Sample-Questions-Answers-Result.pdf   
 
 
 ---
@@ -252,5 +259,6 @@ Experiments and conclusions are based on observed results and documented analysi
 Developed as part of AI/ML Assignment for building a practical RAG-based academic study assistant.
 
 ---
+
 
 
