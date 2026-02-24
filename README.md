@@ -73,14 +73,14 @@ pip install -r requirements.txt
 
 If installing manually:
 
-pip install langchain
-pip install chromadb
-pip install sentence-transformers
-pip install transformers
-pip install pdfplumber
-pip install python-dotenv
-pip install matplotlib
-pip install pandas
+pip install langchain  
+pip install chromadb  
+pip install sentence-transformers  
+pip install transformers  
+pip install pdfplumber  
+pip install python-dotenv  
+pip install matplotlib  
+pip install pandas  
 
 
 ---
@@ -259,6 +259,7 @@ Experiments and conclusions are based on observed results and documented analysi
 Developed as part of AI/ML Assignment for building a practical RAG-based academic study assistant.
 
 ---
+
 
 
 
