@@ -32,8 +32,8 @@ The study assistant:
 
 ---
 
-academic-rag-study-assistant/
-│
+academic-rag-study-assistant/  
+│  
 ├── data/                               
 │
 ├── notebook/                           
@@ -259,6 +259,7 @@ Experiments and conclusions are based on observed results and documented analysi
 Developed as part of AI/ML Assignment for building a practical RAG-based academic study assistant.
 
 ---
+
 
 
 
